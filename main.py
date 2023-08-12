@@ -50,7 +50,7 @@ while True:
                     response = requests.post(DISCORD_WEBHOOK_URL, files={"file": screenshot_1_file},
                                              data={"content": f"Motion detected at {time.strftime('%I:%M:%S %p')}"})
                     print("Discord response:", response.text)
-                    os.remove(screenshot_1_filename)
+                os.remove(screenshot_1_filename)
 
     cv2.imshow('Camera Motion/Face Detector', frame)
     prev_frame = gray.copy()
